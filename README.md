@@ -55,3 +55,5 @@ We will need to go through three stages: Fetching HTML, Obtaining HTML Tree, the
 5. run ```pip install -r requirements.txt```
 6. run ```python3 webscraper.py``` and type ```tsla``` in terminal to test if it is working
 
+## Phase 2: Data Manipulations
+**Pending**
