@@ -1,5 +1,4 @@
 # Yahoo! Finance Web Scraper - Group 7 - CIS 3260
-Class project on how to use and implement a Web Scraper for Yahoo Finance Summary Tables with a given stock ticker.
 
 **What is Web Scraping?**
 
@@ -34,3 +33,25 @@ We will need to go through three stages: Fetching HTML, Obtaining HTML Tree, the
 [Pipenv & Virtual Environments](https://docs.python-guide.org/dev/virtualenvs/)
 
 * This will walk you through installing and using Python packages, as well as explain what the function of pipenv is and how to setup 
+
+***Using Python on Windows?***
+
+[Get started using Python on Windows](https://docs.microsoft.com/en-us/windows/python/web-frameworks)
+
+
+
+## Clone Project Repository
+
+1. run ```git clone git@github.com:CIS-3260-Group-7/YahooWebScraper_Group7_CIS3260.git``` in your terminal
+
+2. Change directory to the project folder ```YahooWebScraper_Group7_CIS3260```
+
+3. run ```python3 -m venv .venv``` inside the project folder
+
+4. run ```source .venv/bin/activate```
+
+> run ```deactivate``` when you're finished with your virtual environment
+
+5. run ```pip install -r requirements.txt```
+6. run ```python3 webscraper.py``` and type ```tsla``` in terminal to test if it is working
+
