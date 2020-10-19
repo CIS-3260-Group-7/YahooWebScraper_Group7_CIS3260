@@ -20,8 +20,8 @@ We will need to go through three stages: Fetching HTML, Obtaining HTML Tree, the
 
 
 
-## Project Setup
-
+## Phase 1: Project Setup
+ 
 **Setup Git On Computer**
 
 [Connecting to GitHub with SSH](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh)
