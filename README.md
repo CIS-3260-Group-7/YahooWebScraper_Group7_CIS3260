@@ -40,7 +40,7 @@ We will need to go through three stages: Fetching HTML, Obtaining HTML Tree, the
 
 
 
-## Clone Project Repository
+### Clone Project Repository
 
 1. run ```git clone git@github.com:CIS-3260-Group-7/YahooWebScraper_Group7_CIS3260.git``` in your terminal
 
@@ -55,3 +55,5 @@ We will need to go through three stages: Fetching HTML, Obtaining HTML Tree, the
 5. run ```pip install -r requirements.txt```
 6. run ```python3 webscraper.py``` and type ```tsla``` in terminal to test if it is working
 
+## Phase 2: Data Manipulations
+**Pending**
