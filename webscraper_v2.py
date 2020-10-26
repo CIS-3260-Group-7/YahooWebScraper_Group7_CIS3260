@@ -29,7 +29,7 @@ stock_ticker = input('Enter stock ticker: ')
 
 # Concatenate the url with the stock ticker and apply upper() to automatically uppercase user input
 link = 'https://finance.yahoo.com/quote/'+ stock_ticker.upper() + '/history?p=' + stock_ticker.upper()
-
+print(link)
 # Create getHTMLContent function to grab HTML content from the link
 def getHTMLContent(link):
     http = urllib3.PoolManager(ca_certs=certifi.where())
@@ -46,4 +46,17 @@ all the tables on the page and print HTML structure.
 content = getHTMLContent(link)
 tables = content.find_all('table')
 for table in tables:
-    print(table.prettify())
+    rows = table.find_all('tr')
+#     print(rows[1].prettify())
+
+    for row in rows:
+            cells = row.find_all('td')
+            if len(cells) > 1:
+                    trade_date = cells[0].find('span')
+                #     open_price = cells[1].find('span')
+                #     high = cells[2].find('span')
+                #     low = cells[3].find('span')
+                #     close = cells[4].find('span')
+                #     adj_close = cells[5].find('span')
+                #     volume = cells[6].find('span')
+                    print(trade_date.get_text())
