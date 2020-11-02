@@ -30,10 +30,11 @@ stock_ticker = input('Enter stock ticker: ')
 # Concatenate the url with the stock ticker and apply upper() to automatically uppercase user input
 link = 'https://finance.yahoo.com/quote/'+ stock_ticker.upper() + '/history?p=' + stock_ticker.upper()
 print(link)
+
 # Create getHTMLContent function to grab HTML content from the link
 def getHTMLContent(link):
     http = urllib3.PoolManager(ca_certs=certifi.where())
-    resp = http.request('GET', link)
+    resp = http.request('GET', link, timeout = 5)
     soup = BeautifulSoup(resp.data.decode('utf-8'), 'html.parser')
     return soup
 
@@ -47,7 +48,7 @@ content = getHTMLContent(link)
 tables = content.find_all('table')
 for table in tables:
     rows = table.find_all('tr')
-#     print(rows[1].prettify())
+    print(rows[0].prettify())
 
     for row in rows:
             cells = row.find_all('td')
