@@ -11,8 +11,6 @@ BeautifulSoup: This library helps to get the HTML structure
                 of the page that is to be manipulated. 
 
 '''
-import numpy as np
-import pandas as pd
 import urllib3
 import certifi
 
