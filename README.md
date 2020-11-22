@@ -57,7 +57,7 @@ We will need to go through three stages: Fetching HTML, Obtaining HTML Tree, the
 
 
 
-# Phase 2: Data Manipulation
+## Data Manipulation
 
 #### All versions of  are developed with the following steps in mind:
 
