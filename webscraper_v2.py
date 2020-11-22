@@ -1,10 +1,4 @@
 '''
-numpy: makes array operations simple and fast
-
-pandas: helps convert the data in a tabular structure, and can 
-        manipulate the data with numerous functions that have been
-        efficiently developed
-
 urllib3: HTTP client for Python
 
 certifi: provides Mozilla’s carefully curated collection of 
@@ -46,18 +40,29 @@ all the tables on the page and print HTML structure.
 '''
 content = getHTMLContent(link)
 tables = content.find_all('table')
-for table in tables:
-    rows = table.find_all('tr')
-    print(rows[0].prettify())
 
+for table in tables:
+    # Use BeautifulSoups find_all() to get all the <th>(Table Headers) from the searching tree
+    table_headers = table.find_all('th')  
+    for title in table_headers:
+        if len(table_headers) > 1:
+            headers = title.find('span').get_text()
+            print(headers)
+
+    rows = table.find_all('tr')
     for row in rows:
-            cells = row.find_all('td')
-            if len(cells) > 1:
-                    trade_date = cells[0].find('span')
-                #     open_price = cells[1].find('span')
-                #     high = cells[2].find('span')
-                #     low = cells[3].find('span')
-                #     close = cells[4].find('span')
-                #     adj_close = cells[5].find('span')
-                #     volume = cells[6].find('span')
-                    print(trade_date.get_text())
+            table_data = row.find_all('td')
+            if len(table_data) > 1:
+                '''Store '''
+                trade_date = table_data[0].find('span').get_text()
+                # open_ = table_data[1].find('span').get_text()
+                # high = table_data[2].find('span').get_text()
+                # low = table_data[3].find('span').get_text()
+                # close = table_data[4].find('span').get_text()
+                # adj_close = table_data[5].find('span').get_text()
+                # volume = table_data[6].find('span').get_text()
+
+                '''Remember to change the variable to retrieve the 
+                correct column of table_data'''
+
+                print(trade_date)
