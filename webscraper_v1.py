@@ -27,4 +27,4 @@ response = requests.get(url, timeout = 5)
 content = BeautifulSoup(response.content, "html.parser")
 
 # print (content.prettify())
-print (content.find('table', attrs={"data-test": "historical-prices"}).text.encode('utf-8'))
+print (content.find('table', attrs={"data-test": "historical-prices"}).prettify())
