@@ -1,9 +1,10 @@
 '''
-urllib3: HTTP client for Python
+LIBRARIES: 
+
+urllib3: HTTP client for Python, and is used to send requests and retrieve their response.
 
 certifi: provides Mozilla’s carefully curated collection of 
         Root Certificates for validating the trustworthiness clear
-        
         of SSL certificates while verifying the identity of 
         TLS hosts.
 
@@ -39,19 +40,29 @@ all the tables on the page and print HTML structure.
 content = getHTMLContent(link)
 tables = content.find_all('table')
 
+'''
+The <table> tag acts as the parent container, which is stored in the tables variable.
+
+Below, we are traversing the table we retrieved from the HTML Content Tree and retrieving 
+the tables headers (th), the tables rows (tr), and the tables data (td)
+'''
 for table in tables:
     # Use BeautifulSoups find_all() to get all the <th>(Table Headers) from the searching tree
     table_headers = table.find_all('th')  
+    print("Table Headers: ")
     for title in table_headers:
         if len(table_headers) > 1:
             headers = title.find('span').get_text()
             print(headers)
 
+    
+    # Use BeautifulSoups find_all() to get all the <tr>(Table Rows) from the searching tree
     rows = table.find_all('tr')
+    print("Table Row Data: ")
+    # Traverse rows and use BeautifulSoups find_all() to get all the <td>(Table Data) from the searching tree
     for row in rows:
             table_data = row.find_all('td')
             if len(table_data) > 1:
-                '''Store '''
                 trade_date = table_data[0].find('span').get_text()
                 # open_ = table_data[1].find('span').get_text()
                 # high = table_data[2].find('span').get_text()

@@ -1,3 +1,12 @@
+'''
+LIBRARIES: 
+
+BeautifulSoup: This library helps to get the HTML structure 
+                of the page that is to be manipulated. 
+
+Requests: This library allows you to send HTTP request
+'''
+
 # First we have to let python know that which libraries to use
 # Good practice to structure the file where all of your imports are on top
 from bs4 import BeautifulSoup
