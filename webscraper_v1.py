@@ -23,7 +23,7 @@ print(url)
 # Store the response from the request sent to the website server
 response = requests.get(url, timeout = 5)
 
-
+# Store formatted HTML Content Tree 
 content = BeautifulSoup(response.content, "html.parser")
 
 # print (content.prettify())

@@ -61,7 +61,7 @@ for table in tables:
     print("Table Row Data: ")
     # Traverse rows and use BeautifulSoups find_all() to get all the <td>(Table Data) from the searching tree
     for row in rows:
-            table_data = row.find_all('td')
+            table_data = row.find_all('td') 
             if len(table_data) > 1:
                 trade_date = table_data[0].find('span').get_text()
                 # open_ = table_data[1].find('span').get_text()
