@@ -6,6 +6,7 @@ pandas: helps convert the data in a tabular structure, and can
         efficiently developed
 '''
 import pandas as pd
+import html5lib
 
 # Ask user for the stock ticker of interest
 stock_ticker = input('Enter stock ticker: ')
